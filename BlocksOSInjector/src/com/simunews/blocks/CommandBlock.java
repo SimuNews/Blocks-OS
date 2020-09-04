@@ -2,7 +2,7 @@ package com.simunews.blocks;
 
 import com.simunews.BuildList;
 import com.simunews.CompoundTagBuilder;
-import com.stevertus.objd.basic.Widget;
+import com.stevertus.objd.Widget;
 import org.jnbt.*;
 
 public class CommandBlock {

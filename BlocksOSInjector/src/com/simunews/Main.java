@@ -1,12 +1,14 @@
 package com.simunews;
 
 import com.simunews.inject.ReadLogFile;
-import com.simunews.inject.plugin.Plugin;
 import com.stevertus.objd.basic.Command;
-import com.stevertus.objd.Say;
+import com.stevertus.objd.basic.Say;
 import com.stevertus.objd.basic.Scoreboard;
-import com.stevertus.objd.basic.Widget;
+import com.stevertus.objd.Widget;
+import org.jnbt.NBTOutputStream;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,15 +28,7 @@ public class Main {
         Scoreboard.prefix = "blOS";
 
         List<Widget> w = new LinkedList<>();
-        w.add(new Say("hello"));
-        w.add(new Say("world"));
-        w.add(new Command("/give @p apple"));
-        w.add(new Scoreboard("testScore"));
-        w.add(Scoreboard.trigger("testScore1", null));
-        w.add(Scoreboard.remove("testScore", null));
-        w.add(Scoreboard.click("testScore2", null));
-        w.add(Scoreboard.setDisplay("testScore2"));
-        BuildNBT buildNBT = new BuildNBT(w);
+
 
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
@@ -72,6 +66,7 @@ public class Main {
                     command = command.substring(0, command.indexOf("\r"));
                 if(command.equalsIgnoreCase("stop"))
                     break;
+
             }
 
         }
@@ -80,15 +75,9 @@ public class Main {
 
 
 
-        //EnablePlugin nePl = new EnablePlugin(new Plugin());
+        //EnablePlugin enPl = new EnablePlugin(new Plugin());
 
-        /*try {
-            NBTOutputStream nbtOut = new NBTOutputStream(new FileOutputStream(buildNBT + ".nbt"));
-            nbtOut.writeTag(buildNBT.build());
-            nbtOut.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
+
 
     }
 }

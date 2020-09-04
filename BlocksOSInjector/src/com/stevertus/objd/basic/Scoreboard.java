@@ -1,5 +1,7 @@
 package com.stevertus.objd.basic;
 
+import com.stevertus.objd.Widget;
+
 public class Scoreboard extends Widget {
 
     public static String prefix;

@@ -3,15 +3,14 @@ package com.simunews.inject.plugin;
 import com.simunews.inject.command.Command;
 import com.simunews.inject.command.CommandExecutor;
 import com.simunews.inject.command.PluginCommand;
-import com.sun.istack.internal.NotNull;
 import org.blocks.sender.CommandSender;
-import org.blocks.sender.Player;
-import org.jnbt.Tag;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
 
 public abstract class Plugin implements CommandExecutor {
     private PluginDescriptionFile description;
+    SimplePluginLoader spl = null;
 
     public PluginCommand getCommand(@NotNull String name) {
         String alias = name.toLowerCase(Locale.ENGLISH);

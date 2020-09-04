@@ -2,7 +2,6 @@ package com.simunews.inject.plugin;
 
 import org.jnbt.CompoundTag;
 import org.yaml.snakeyaml.Yaml;
-import sun.plugin.com.JavaClass;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -47,7 +46,7 @@ public class SimplePluginLoader {
         try {
             classToLoad = (Class) classList.get(i).get("class");
             method = classToLoad.getMethod(_method); //Get the method
-            myClassObj = classToLoad.newInstance();
+            myClassObj = classToLoad.getDeclaredConstructor().newInstance();
             return method.invoke(myClassObj);
         } catch (IllegalAccessException e) {
             e.printStackTrace();

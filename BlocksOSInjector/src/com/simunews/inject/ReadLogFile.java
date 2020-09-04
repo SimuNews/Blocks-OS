@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class ReadLogFile {
     //private String path = "./logs/latest.log";
-    private String path = "C:\\Users\\redst\\OneDrive\\Dokumente\\MinecraftTestServer\\1.16.2_vanilla\\logs\\latest.log";
+    private String path = "C:\\Users\\SimuNews\\Documents\\MinecraftTestServers\\vanilla_1_16_2\\logs\\latest.log";
 
     private String timeStamp;
     private String sender;

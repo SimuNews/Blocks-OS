@@ -1,5 +1,6 @@
 package com.stevertus.objd.basic;
 
+import com.stevertus.objd.Widget;
 import com.stevertus.objd.basic.types.Entity;
 
 public class Tag extends Widget {

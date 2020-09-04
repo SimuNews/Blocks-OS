@@ -1,6 +1,6 @@
 package com.simunews;
 
-import com.stevertus.objd.basic.Widget;
+import com.stevertus.objd.Widget;
 import com.simunews.blocks.*;
 import org.jnbt.*;
 

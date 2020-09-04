@@ -1,5 +1,7 @@
 package com.stevertus.objd.basic;
 
+import com.stevertus.objd.Widget;
+
 public class Command extends Widget {
     protected String command;
 
