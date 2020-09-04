@@ -11,6 +11,6 @@ public class Say extends Widget {
 
     @Override
     public String generate() {
-        return "..asd  /  say " + value;
+        return "say " + value;
     }
 }
